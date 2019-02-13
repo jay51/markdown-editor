@@ -53,7 +53,13 @@ class App extends React.Component {
 					/>
 				</div>
 				{/* second editor for formated text */}
-				<div className="editor md">{this.state.parseData}</div>
+				{/* for the underlaying html */}
+				{/* <div className="editor md">{this.state.parseData}</div> */}
+				{/* for the formated text */}
+				<div
+					className="editor md"
+					dangerouslySetInnerHTML={{ __html: this.state.parseData }}
+				/>
 			</section>
 		);
 	}

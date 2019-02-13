@@ -36,10 +36,12 @@ body {
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
-
+/* markdown output */
 .md {
 	overflow-y: scroll;
 	padding-right: 0.5rem;
+	padding-bottom: 1.5rem;
+	border-left: 2px solid black;
 }
 
 #text-editor {
@@ -83,4 +85,45 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #444;
+}
+
+/* markdown text format styles */
+
+p {
+	line-height: 2rem;
+	word-spacing: 0.3rem;
+}
+
+h1,
+h2 {
+	margin: 1.5rem;
+	padding: 1.5rem 0.5rem;
+	border-bottom: 2px solid #333;
+}
+
+code {
+	display: inline-block;
+	background-color: #f9f9f9;
+	color: black;
+	font-weight: bold;
+	padding: 0.3rem;
+}
+
+blockquote {
+	background: #f9f9f9;
+	border-left: 10px solid #ccc;
+	margin: 1em 1rem;
+	padding: 0.5em 1rem;
+	/* quotes: "\201C""\201D""\2018""\2019"; */
+}
+blockquote:before {
+	color: #ccc;
+	/* content: open-quote; */
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+blockquote p {
+	display: inline;
 }
