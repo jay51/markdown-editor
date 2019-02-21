@@ -94,8 +94,7 @@ p {
 	word-spacing: 0.3rem;
 }
 
-h1,
-h2 {
+h1 {
 	margin: 1.5rem;
 	padding: 1.5rem 0.5rem;
 	border-bottom: 2px solid #333;
@@ -112,7 +111,7 @@ code {
 blockquote {
 	background: #f9f9f9;
 	border-left: 10px solid #ccc;
-	margin: 1em 1rem;
+	margin: 1em 0;
 	padding: 0.5em 1rem;
 	/* quotes: "\201C""\201D""\2018""\2019"; */
 }
@@ -127,3 +126,14 @@ blockquote:before {
 blockquote p {
 	display: inline;
 }
+
+/* Js language highlighting */
+.js {
+	background: #444;
+	margin: 2rem;
+	padding: 1rem;
+	border-radius: 3px;
+	color: aqua;
+}
+
+/* .js */

@@ -1,4 +1,4 @@
-// Initial welcome page. Delete the following line to remove it.
+// Initial welcome page.
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
@@ -11,6 +11,7 @@ class App extends React.Component {
 			"text-editor": "",
 			parseData: ""
 		};
+
 		this.handleChange = this.handleChange.bind(this);
 		this.parseTextToMarkdown = this.parseTextToMarkdown.bind(this);
 		this.converter = new showdown.Converter();
@@ -24,10 +25,9 @@ class App extends React.Component {
 
 	parseTextToMarkdown(text) {
 		// parse data to markdown
-		console.log("parseData");
-		text = this.converter.makeHtml(text);
+		const parseData = this.converter.makeHtml(text);
 		// setState for parsedData
-		this.setState({ parseData: text });
+		this.setState({ parseData });
 	}
 
 	render() {
@@ -42,8 +42,21 @@ class App extends React.Component {
 					<div className="line">5</div>
 					<div className="line">6</div>
 					<div className="line">7</div>
+					<div className="line">8</div>
+					<div className="line">9</div>
+					<div className="line">10</div>
+					<div className="line">11</div>
+					<div className="line">12</div>
+					<div className="line">13</div>
+					<div className="line">14</div>
+					<div className="line">15</div>
+					<div className="line">16</div>
+					<div className="line">17</div>
+					<div className="line">18</div>
+					<div className="line">19</div>
 				</div>
 				{/* first editor for markdown text */}
+
 				<div className="editor">
 					<textarea
 						name="text-editor"
@@ -52,6 +65,7 @@ class App extends React.Component {
 						id="text-editor"
 					/>
 				</div>
+
 				{/* second editor for formated text */}
 				{/* for the underlaying html */}
 				{/* <div className="editor md">{this.state.parseData}</div> */}
