@@ -19,15 +19,16 @@ class App extends React.Component {
 
 	handleChange(e) {
 		const text = e.target.value;
-		this.setState({ [e.target.name]: text });
 		this.parseTextToMarkdown(text);
 	}
 
 	parseTextToMarkdown(text) {
 		// parse data to markdown
+		console.log(text);
 		const parseData = this.converter.makeHtml(text);
+		console.log(parseData);
 		// setState for parsedData
-		this.setState({ parseData });
+		this.setState({ "text-editor": text, parseData });
 	}
 
 	render() {
@@ -54,6 +55,12 @@ class App extends React.Component {
 					<div className="line">17</div>
 					<div className="line">18</div>
 					<div className="line">19</div>
+					<div className="line">20</div>
+					<div className="line">21</div>
+					<div className="line">22</div>
+					<div className="line">23</div>
+					<div className="line">24</div>
+					<div className="line">25</div>
 				</div>
 				{/* first editor for markdown text */}
 

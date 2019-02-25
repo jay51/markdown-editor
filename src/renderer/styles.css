@@ -127,7 +127,9 @@ blockquote p {
 	display: inline;
 }
 
-/* Js language highlighting */
+/* language highlighting */
+
+/* .js */
 .js {
 	background: #444;
 	margin: 2rem;
@@ -136,4 +138,11 @@ blockquote p {
 	color: aqua;
 }
 
-/* .js */
+/* .python */
+.python {
+	background: #888;
+	margin: 2rem;
+	padding: 1rem;
+	border-radius: 3px;
+	color: darkmagenta;
+}
